@@ -30,8 +30,8 @@
         "sort-packages": true
     },
     "scripts": {
-        "bench-short": "phpbench run tests/Benchmark --report=aggregate --progress=dots --bootstrap=vendor/autoload.php",
-        "bench": "phpbench run tests/Benchmark --report=aggregate --progress=dots --bootstrap=vendor/autoload.php --iterations=10",
-        "bench-long": "phpbench run tests/Benchmark --report=aggregate --progress=dots --bootstrap=vendor/autoload.php --iterations=100"
+        "bench-short": "phpbench run GetRequestBench.php --report=aggregate --progress=dots --bootstrap=vendor/autoload.php",
+        "bench": "phpbench run GetRequestBench.php --report=aggregate --progress=dots --bootstrap=vendor/autoload.php --iterations=10",
+        "bench-long": "phpbench run GetRequestBench.php --report=aggregate --progress=dots --bootstrap=vendor/autoload.php --iterations=100"
     }
 }
