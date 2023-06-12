@@ -1,0 +1,15 @@
+services:
+  server:
+    build: .
+    command: php server.php
+
+  clients:
+    build: .
+    command: php client.php
+    deploy:
+      mode: replicated
+      replicas: 5
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
