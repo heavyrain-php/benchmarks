@@ -1,11 +1,17 @@
 services:
-  server:
+  rawtcp-server:
     build: .
-    command: php server.php
+    volumes:
+      - ./:/opt/app:ro
+    working_dir: /opt/app
+    command: php rawtcp/server.php
 
-  clients:
+  rawtcp-clients:
     build: .
-    command: php client.php
+    command: php rawtcp/client.php
+    volumes:
+      - ./:/opt/app:ro
+    working_dir: /opt/app
     deploy:
       mode: replicated
       replicas: 5

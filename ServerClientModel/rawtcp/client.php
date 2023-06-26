@@ -13,7 +13,7 @@ use Monolog\Logger;
 
 use function Amp\Socket\connect;
 
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 $uri = 'tcp://localhost:8080';
 $logger = new Logger('HEAVYRAIN-BENCHMARK', [

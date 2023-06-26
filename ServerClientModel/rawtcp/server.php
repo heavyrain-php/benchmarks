@@ -14,7 +14,7 @@ use Monolog\Logger;
 use function Amp\async;
 use function Amp\Socket\listen;
 
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 $address = 'tcp://0.0.0.0:8080';
 $logger = new Logger('HEAVYRAIN-BENCHMARK', [
